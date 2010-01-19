@@ -1,5 +1,5 @@
 %define upstream_name    Text-Markdown
-%define upstream_version 1.000029
+%define upstream_version 1.000030
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
