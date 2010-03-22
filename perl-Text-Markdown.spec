@@ -1,5 +1,5 @@
 %define upstream_name    Text-Markdown
-%define upstream_version 1.000030
+%define upstream_version 1.000031
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -21,6 +21,7 @@ BuildRequires: perl(Test::Differences)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Balanced)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -40,11 +41,10 @@ tags (like <div> and <table> as well).
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -56,7 +56,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes README
+%{_bindir}/*
+%{_mandir}/man1/*
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
