@@ -2,14 +2,14 @@
 %define upstream_version 1.000031
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	Convert Markdown syntax to (X)HTML
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/bobtfish/text-markdown
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/Text-Markdown-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
