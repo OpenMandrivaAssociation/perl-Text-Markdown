@@ -1,15 +1,13 @@
 %define upstream_name    Text-Markdown
-%define upstream_version 1.000031
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	1.000031
+Release:	7
 
 Summary:	Convert Markdown syntax to (X)HTML
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/bobtfish/text-markdown
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/Text-Markdown-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/Text-Markdown-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -38,7 +36,7 @@ HTML tags anywhere in a Markdown document, and you can use block level HTML
 tags (like <div> and <table> as well).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
